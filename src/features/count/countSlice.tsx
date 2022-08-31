@@ -3,8 +3,9 @@ import { createSlice } from "@reduxjs/toolkit";
 // To support wide actions
 import { globalActions } from "../global/global";
 
+type CountState = { count: number; }
 
-const initialState = { count: 0 };
+const initialState: CountState = { count: 0 };
 
 // Uses immer implicitly - code may directly mutate state
 // So reducers DO stuff to state, not return a new one

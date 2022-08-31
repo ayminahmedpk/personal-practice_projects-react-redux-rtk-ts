@@ -1,13 +1,14 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux/es/exports'
+// import { useSelector, useDispatch } from 'react-redux/es/exports'
+import { useAppSelector, useAppDispatch } from '../../app/hooks'
 
 import { textActions } from '../../features/text/textSlice'
 
 const TextController = () => {
   
-  const text = useSelector(state => state.text.text)
+  const text = useAppSelector(state => state.text.text)
   
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const writeText = textActions.writeText;
   const resetText = textActions.resetText;
 

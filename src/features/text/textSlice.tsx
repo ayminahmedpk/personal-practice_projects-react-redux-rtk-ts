@@ -1,14 +1,19 @@
-import { createSlice } from "@reduxjs/toolkit";
+import {
+  createSlice,
+  PayloadAction,
+} from "@reduxjs/toolkit";
 
 import { globalActions } from "../global/global";
 
-const initialState = {text: '[initial]'};
+type TextState = { text: string; }
+
+const initialState:TextState = {text: '[initial]'};
 
 const textSlice = createSlice({
   name: 'text',
   initialState,
   reducers: {
-    writeText: (state, action) => {state.text = action.payload},
+    writeText: (state, action: PayloadAction<string>) => {state.text = action.payload},
     resetText: (state) => {state.text = '[reset-text]'},
   },
   extraReducers: (builder) => {

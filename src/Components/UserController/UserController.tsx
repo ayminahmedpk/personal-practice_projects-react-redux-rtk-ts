@@ -1,12 +1,13 @@
 import React from 'react'
 
-import { useDispatch } from 'react-redux'
+// import { useDispatch } from 'react-redux'
+import { useAppDispatch } from '../../app/hooks'
 
 import { fetchUsers } from '../../features/user/userSlice'
 
 const UserController = () => {
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   return (
     <div className="component">

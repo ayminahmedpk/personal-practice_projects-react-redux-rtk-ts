@@ -1,11 +1,12 @@
 import React from 'react'
 
-import { useDispatch } from 'react-redux/es/exports'
+// import { useDispatch } from 'react-redux/es/exports'
+import { useAppDispatch } from '../../app/hooks';
 import { globalActions } from '../../features/global/global';
 
 const GlobalController = () => {
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const reset = globalActions.reset;
 
   return (

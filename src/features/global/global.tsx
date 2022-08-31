@@ -1,9 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+type GlobalState = {};
+
+const initialState: GlobalState = {};
 
 const globalSlice = createSlice({
   name: 'global',
-  initialState: {},
+  initialState,
   reducers: {
     reset: () => {},
   }

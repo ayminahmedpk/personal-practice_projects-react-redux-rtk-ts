@@ -1,12 +1,12 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
+import { useAppSelector } from '../../app/hooks';
 
 const Display = () => {
 
-  const count = useSelector(state => state.count.count);
-  const text  = useSelector(state => state.text.text  );
+  const count = useAppSelector(state => state.count.count);
+  const text  = useAppSelector(state => state.text.text  );
   
-  const user  = useSelector(state => state.user);
+  const user  = useAppSelector(state => state.user);
 
 
   const userList =  user.users.length > 0 ? (

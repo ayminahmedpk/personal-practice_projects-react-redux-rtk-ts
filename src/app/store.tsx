@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit/";
 
-import { countReducer } from "../features/count/countSlice";
-import { textReducer } from "../features/text/textSlice";
+import { countReducer  } from "../features/count/countSlice";
+import { textReducer   } from "../features/text/textSlice";
 import { globalReducer } from "../features/global/global";
-import { userReducer } from "../features/user/userSlice";
+import { userReducer   } from "../features/user/userSlice";
 
 // Middleware:
 import logger from "redux-logger"; // No longer needs to be initialized
@@ -22,3 +22,5 @@ const store = configureStore({
 });
 
 export default store;
+export type RootState   = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch;

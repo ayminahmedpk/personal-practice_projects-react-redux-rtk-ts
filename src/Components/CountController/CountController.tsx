@@ -1,10 +1,12 @@
 import React from 'react'
-import { useDispatch } from 'react-redux/es/exports'
+
+// import { useDispatch } from 'react-redux/es/exports'
+import { useAppDispatch } from '../../app/hooks';
 
 import { countActions } from '../../features/count/countSlice';
 
 const CountController = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const decrement = countActions.decrementCount;
   const increment = countActions.incrementCount;
